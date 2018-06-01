@@ -1,0 +1,145 @@
+/*ͨ���Զ�����*/
+.inline-block{
+	display: inline-block;
+}
+.pd0{
+	padding: 0;
+}
+
+
+/*ͨ����ʽ */
+#menuContent{
+	width:100%;
+	height:100%;
+}
+.menuContainer{
+	width: 100%;
+	height: 100%;
+}
+.tab-content{
+	height:auto;
+}
+#APIList{
+	height:200px;
+	overflow: auto;
+}
+#selectAPI{
+	width:120px;
+}
+/*��Ӧʽ��ʽ */
+@media screen and (max-device-width:2048) {
+	/*ipad air:2048 x 1536*/
+	#rootContainer{
+		width: 100%;
+		height: 100%;
+	}
+	#browserArea{
+		/*
+			�ſ᣺1740/790
+			�����գ�1060/597
+			���ӣ�1110/624
+		  */
+		width: 1422px;
+		height: 800px;
+		border: 1px solid;
+	}
+	#menuArea{
+		width: 589px;
+		height: 800px;
+		border: 1px solid;
+	}
+	.menu-btn{
+		width: 100px;
+		height: 39px;
+		margin: 2px 7px;
+		font-size: 17px;
+		padding:4px 0 0;
+	}
+}
+@media screen and (max-width:1920px) {
+	/*desktop:1920 x 1280*/
+	#rootContainer{
+		width: 96%;
+		height: 100%;
+	}
+	#browserArea{
+		/*
+			�ſ᣺1740/790
+			�����գ�1060/597
+			���ӣ�1110/624
+		  */
+		width: 1280px;
+		height: 720px;
+		border: 1px solid;
+	}
+	#menuArea{
+		width: 530px;
+		height: 720px;
+		border: 1px solid;
+	}
+	.menu-btn{
+		width: 90px;
+		height: 35px;
+		margin: 2px 6px;
+		font-size: 16px;
+		padding:4px 0 0;
+	}
+}
+@media screen and (max-width:1366px) {
+	/*laptop:1366 x 768*/
+	#rootContainer{
+		width: 96%;
+		height: 100%;
+	}
+	#browserArea{
+		/*
+			�ſ᣺1740/790
+			�����գ�1060/597
+			���ӣ�1110/624
+		  */
+		width: 910px;
+		height: 512px;
+		border: 1px solid;
+	}
+	#menuArea{
+		width: 377px;
+		height: 512px;
+		border: 1px solid;
+	}
+	.menu-btn{
+		width: 64px;
+		height: 25px;
+		margin: 2px 4px;
+		font-size: 12px;
+		padding:3px 0 0;
+	}
+}
+@media screen and (max-width:1080px) {
+	/*Red MI Note4:1920 x 1080*/
+	#rootContainer{
+		width: 96%;
+		height: 100%;
+	}
+	#browserArea{
+		/*
+			�ſ᣺1740/790
+			�����գ�1060/597
+			���ӣ�1110/624
+		  */
+		width: 1280px;
+		height: 720px;
+		border: 1px solid;
+	}
+	#menuArea{
+		width: 530px;
+		height: 720px;
+		border: 1px solid;
+	}
+	.menu-btn{
+		width: 90px;
+		height: 35px;
+		margin: 2px 6px;
+		font-size: 16px;
+		padding:4px 0 0;
+	}
+}

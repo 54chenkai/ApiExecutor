@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		
+		<title></title>
+		
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/api-list.js"></script>
+		<script src="../js/initialization.js"></script>
+		<script src="../js/processor.js"></script>
+		<script src="../js/messenger.js"></script>
+
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/appearance.css" rel="stylesheet">
+		
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container" id="rootContainer">
+			<div class="row row-margin" id="operateArea">
+				<div class="col-xs-12 col-lg-4">
+					<form class="form-inline">
+						<label id="api-dim-label"></label>
+						<div class="dropdown inline-block" id="api-dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="selectAPI" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						  	<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="selectAPI" id="APIList" data-toggle="dropdown">
+						  </ul>
+						</div>
+						<label for="first-dim-name" id="first-dim-label"></label>
+						<input id="first-dim-name" class="form-control" placeholder="" disabled>
+					</form>
+				</div>
+				<div class="col-xs-12 col-lg-4">
+					<form class="form-inline">	
+						<input id="customizedParams"  class="form-control" placeholder="输入请求参数字符串">
+						<button class="btn btn-default" onclick="Processor.customizeParams()"  type="button" id="custom-btn"></button>
+						<!-- <button class="btn btn-default" onclick="paste()";  type="button">粘贴</button> -->
+						<button class="btn btn-default" onclick="Processor.clearParams();"  type="button">清除</button>
+					</form>
+				</div>
+				<div class="col-xs-12 col-lg-4">
+					<form class="form-inline">
+						<input id="custom-tip" class="form-control" value="西游记"  placeholder="">
+						<button class="btn btn-default" onclick="Messenger.getParams()" type="button" id="execute-btn"></button>
+					</form>
+				</div>
+			</div>
+			<div class="row row-margin" id="searcherArea">
+				<div class="col-xs-12 pull-left pd0" id="browserArea">
+					<iframe id="browser" height="100%" width="100%">
+					</iframe>
+				</div>
+				<div class="col-xs-12 pull-left pd0" id="menuArea">
+                    <div id="menuContainer">
+                    </div>
+                    <iframe id="client1" height="10" width="10">
+                    </iframe>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" id="curAPI">
+		<input type="hidden" id="curParams">
+		<script type="text/javascript">
+			$(function (){
+			    Initialization.init();
+			}());
+		</script>
+	</body>
+</html>
