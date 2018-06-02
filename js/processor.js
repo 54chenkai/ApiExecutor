@@ -29,5 +29,6 @@ Processor = {
     },
     setParams : function (menuContent) {
         $('#menuArea').html(menuContent);
+        $('#menuContent .websiteItem:first').trigger('click');
     }
 }

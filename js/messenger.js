@@ -89,8 +89,9 @@ Messenger = {
                         var queue = $('<div class="menuContainer"></div>');
 
                         var btn_index = 0;
-                        for(var btnIndex in siteList) {
-                            var btn = site[btnIndex];
+                        var episodeList = siteList[siteName];
+                        for(var btnIndex in episodeList) {
+                            var btn = episodeList[btnIndex];
                             var btnItem = '<button class="btn btn-default btn-lg menu-btn" data-param="'+btn.url+'" onclick="Processor.buttonExecute(this)">'+btn.num+'</button>';
                             queue.append(btnItem);
                            if (btn_index != 0 && btn_index % 10 == 0){
@@ -112,8 +113,6 @@ Messenger = {
             var btnw=w/5-8;
             $('.menu-btn').width(btnw);
         }
-
-        $('#menuContent .websiteItem:first').trigger('click');
 
         $('#custom-tip').val(data.realName);
         Processor.setParams(menuContent);
