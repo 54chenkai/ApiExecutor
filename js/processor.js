@@ -22,5 +22,12 @@ Processor = {
     buttonExecute (button) {
         $("#curParams").val($(button).attr("data-param")) ;
         Processor.execute();
+    },
+    getParams : function (){
+        var q=$('#custom-tip').val();
+        Messenger.execute(q);
+    },
+    setParams : function (menuContent) {
+        $('#menuArea').html(menuContent);
     }
 }
